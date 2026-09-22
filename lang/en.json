@@ -10,5 +10,6 @@
   "TRANS.Ligacoes.VerTitulo": "2 · For viewers",
   "TRANS.Ligacoes.VerAjuda": "Pin this one in Discord. It never changes between sessions.",
   "TRANS.Ligacoes.SemUtilizador": "You haven't picked the broadcast user in the module settings yet.",
-  "TRANS.Ligacoes.Copiada": "Link copied."
+  "TRANS.Ligacoes.Copiada": "Link copied.",
+  "TRANS.Ligacoes.EnviarSom": "When sharing, pick the Foundry tab and keep \"Also share tab audio\" on. Click once inside the Foundry tab so its sound starts."
 }

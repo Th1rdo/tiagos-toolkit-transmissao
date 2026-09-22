@@ -54,3 +54,8 @@ body.ttt-transmissao #chat-notifications {
   margin: 0;
   color: #e0a040;
 }
+#ttt-ligacoes .ttt-nota {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.7;
+}

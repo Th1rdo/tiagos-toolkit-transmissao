@@ -60,3 +60,10 @@ test("as duas ligações apontam para o mesmo canal que o VDO.Ninja usa", () => 
   assert.ok(l.enviar.includes("push=mesa_2c63r3ddnd&"));
   assert.ok(l.ver.includes("view=mesa_2c63r3ddnd&"));
 });
+
+test("a transmissão leva o som do Foundry, em qualidade de música", () => {
+  const l = ligacoes("mesa_x");
+  assert.ok(!l.enviar.includes("videoonly"));
+  assert.ok(l.enviar.includes("&proaudio") && l.ver.includes("&proaudio"));
+  assert.ok(l.enviar.includes("&suppresslocalaudio"));
+});

@@ -1,7 +1,8 @@
 # Tiago's Toolkit: Transmissão
 
 Uma transmissão da mesa para quem assiste. Os espectadores abrem **uma ligação** e veem o mapa como o
-grupo o vê — sem a interface do Foundry, sem conta, sem instalar nada. O som continua no Discord.
+grupo o vê — sem a interface do Foundry, sem conta, sem instalar nada. As vozes continuam no Discord; o som do Foundry (música, rituais,
+cutscenes) vai com a imagem.
 
 **O ecrã do mestre nunca entra na transmissão.** O que se transmite é outro utilizador do Foundry, aberto
 num browser à parte, que só vê o que os jogadores veem.
@@ -48,8 +49,10 @@ Foundry v13 e v14. Sem dependências.
 ## Em cada sessão
 
 1. Abrir o Chrome (os separadores voltam sozinhos).
-2. No separador do VDO.Ninja: **partilhar ecrã** → *Separador* → o separador do Foundry.
-3. Pronto. Os espectadores abrem a ligação fixada no Discord.
+2. No separador do VDO.Ninja: **partilhar ecrã** → *Separador* → o separador do Foundry, com
+   **«Partilhar também o áudio do separador»** ligado.
+3. Clicar uma vez dentro do separador do Foundry — o browser só deixa tocar som depois de um clique.
+4. Pronto. Os espectadores abrem a ligação fixada no Discord (e clicam uma vez para ligar o som).
 
 O tamanho da janela da transmissão é o tamanho do vídeo: 1280×720 ou 1920×1080 ficam bem.
 

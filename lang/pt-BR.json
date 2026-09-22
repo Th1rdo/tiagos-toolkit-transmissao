@@ -10,5 +10,6 @@
   "TRANS.Ligacoes.VerTitulo": "2 · Para os espectadores",
   "TRANS.Ligacoes.VerAjuda": "Fixa esta no Discord. Não muda de sessão para sessão.",
   "TRANS.Ligacoes.SemUtilizador": "Ainda não escolheste o utilizador da transmissão nas definições do módulo.",
-  "TRANS.Ligacoes.Copiada": "Ligação copiada."
+  "TRANS.Ligacoes.Copiada": "Ligação copiada.",
+  "TRANS.Ligacoes.EnviarSom": "Ao partilhar, escolhe o separador do Foundry e deixa ligado «Partilhar também o áudio do separador». Clica uma vez dentro do separador do Foundry para o som arrancar."
 }

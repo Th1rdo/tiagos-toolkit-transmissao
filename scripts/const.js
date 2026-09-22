@@ -26,9 +26,13 @@ export function ligacoes(canal) {
   // de quem envia. Com um hífen no canal, a ligação de ver procurava «mesa-x» e a
   // transmissão estava em «mesa_x»: ecrã azul para todos os espectadores (0.1.0).
   const c = canalLimpo(canal);
+  // Som do separador vai junto: o Discord leva as vozes, mas a música, os sons
+  // dos rituais e o áudio das cutscenes só tocam dentro do Foundry (0.1.1 ia mudo).
+  // proaudio nos dois lados: estéreo e sem filtros de voz, senão a música chega
+  // a 32 kbps mono. suppresslocalaudio: o mestre não ouve tudo a dobrar.
   return {
-    enviar: `https://vdo.ninja/?push=${c}&screenshare&screensharevideoonly`,
-    ver: `https://vdo.ninja/?view=${c}&cleanoutput`
+    enviar: `https://vdo.ninja/?push=${c}&screenshare&proaudio&suppresslocalaudio`,
+    ver: `https://vdo.ninja/?view=${c}&cleanoutput&proaudio`
   };
 }
 
