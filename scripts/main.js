@@ -59,9 +59,18 @@ Hooks.once("ready", async () => {
   // e a transmissão nunca tem uma. Fecha-se já e de cada vez que voltar.
   const semConfig = (app) => { if (app.document?.id === uid) app.close(); };
   Hooks.on("renderUserConfig", semConfig);
-  for (const app of foundry.applications.instances.values()) {
-    if (app.constructor.name === "UserConfig") semConfig(app);
-  }
+  // Ao entrar, o sistema e os módulos abrem janelas — novidades da versão, boas-
+  // -vindas — e a transmissão mostrava-as por cima do mapa a quem assiste (0.1.2).
+  // Nos primeiros segundos fecha-se tudo o que for janela; depois disso uma janela
+  // é o mestre a mostrar alguma coisa (imagem, diário) e fica.
+  const ARRANQUE = 20000;
+  const inicio = Date.now();
+  const janela = (app) => app?.hasFrame || app?.options?.popOut;
+  const fechar = (app) => { if (Date.now() - inicio < ARRANQUE && janela(app)) app.close(); };
+  Hooks.on("renderApplicationV2", fechar);
+  Hooks.on("renderApplication", fechar);
+  for (const app of foundry.applications.instances.values()) if (janela(app)) app.close();
+  for (const app of Object.values(ui.windows ?? {})) app.close?.();
   // O cursor do mestre diz para onde ele está a olhar — uma armadilha escondida,
   // uma porta que ainda ninguém viu. Na transmissão não há cursores; os pings ficam.
   const semCursores = () => { if (canvas.controls?.cursors) canvas.controls.cursors.visible = false; };
