@@ -1,0 +1,14 @@
+{
+  "TRANS.Config.Utilizador": "Utilizador da transmissão",
+  "TRANS.Config.UtilizadorHint": "O utilizador que fica aberto no browser da transmissão. Vê o que o grupo vê, sem a interface do Foundry, e a câmara mexe-se sozinha. Cria um utilizador próprio para isto (por exemplo «Transmissão»), com o papel de Jogador e sem personagem.",
+  "TRANS.Config.Ninguem": "— nenhum —",
+  "TRANS.Ligacoes.Titulo": "Transmissão",
+  "TRANS.Ligacoes.Botao": "Ligações da transmissão",
+  "TRANS.Ligacoes.Hint": "As duas ligações da transmissão: uma para abrir no browser da transmissão, outra para os espectadores.",
+  "TRANS.Ligacoes.EnviarTitulo": "1 · No browser da transmissão",
+  "TRANS.Ligacoes.EnviarAjuda": "Abre esta ligação no mesmo browser onde entraste no Foundry como",
+  "TRANS.Ligacoes.VerTitulo": "2 · Para os espectadores",
+  "TRANS.Ligacoes.VerAjuda": "Fixa esta no Discord. Não muda de sessão para sessão.",
+  "TRANS.Ligacoes.SemUtilizador": "Ainda não escolheste o utilizador da transmissão nas definições do módulo.",
+  "TRANS.Ligacoes.Copiada": "Ligação copiada."
+}

@@ -1,0 +1,56 @@
+/*
+ * O cliente da transmissão: só o mapa e o que acontece nele.
+ * Fica: jogadas de dados (#chat-notifications), balões de fala, réguas,
+ * e as camadas dos outros módulos do toolkit (Stage e POI vivem dentro de
+ * #interface, por isso esconde-se peça a peça e não o #interface inteiro).
+ */
+body.ttt-transmissao #ui-left,
+body.ttt-transmissao #hotbar,
+body.ttt-transmissao #sidebar,
+body.ttt-transmissao #loading,
+body.ttt-transmissao #notifications,
+body.ttt-transmissao #tooltip,
+body.ttt-transmissao #pause,
+body.ttt-transmissao #chat-notifications #chat-message,
+body.ttt-transmissao #chat-notifications #chat-controls {
+  display: none !important;
+}
+
+/* as jogadas encostam ao canto, sem a barra lateral ao lado */
+body.ttt-transmissao #chat-notifications {
+  opacity: 1;
+}
+
+/* ── janela das ligações (mestre) ─────────────────────────── */
+#ttt-ligacoes .ttt-ligacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px 2px;
+}
+#ttt-ligacoes .ttt-passo h3 {
+  margin: 0 0 2px;
+  border: none;
+}
+#ttt-ligacoes .ttt-passo p {
+  margin: 0 0 6px;
+  opacity: 0.8;
+}
+#ttt-ligacoes .ttt-linha {
+  display: flex;
+  gap: 6px;
+}
+#ttt-ligacoes .ttt-linha input {
+  flex: 1;
+  font-family: monospace;
+  font-size: 12px;
+}
+#ttt-ligacoes .ttt-linha button {
+  flex: 0 0 34px;
+  height: auto;
+  min-height: 0;
+}
+#ttt-ligacoes .ttt-aviso {
+  margin: 0;
+  color: #e0a040;
+}

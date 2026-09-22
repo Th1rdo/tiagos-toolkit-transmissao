@@ -1,0 +1,19 @@
+<section class="ttt-ligacoes">
+  <div class="ttt-passo">
+    <h3>{{localize "TRANS.Ligacoes.EnviarTitulo"}}</h3>
+    <p>{{localize "TRANS.Ligacoes.EnviarAjuda"}}{{#if utilizador}} <strong>{{utilizador}}</strong>{{/if}}</p>
+    <div class="ttt-linha">
+      <input type="text" readonly value="{{enviar}}">
+      <button type="button" data-action="copiar" data-texto="{{enviar}}"><i class="fa-solid fa-copy"></i></button>
+    </div>
+  </div>
+  <div class="ttt-passo">
+    <h3>{{localize "TRANS.Ligacoes.VerTitulo"}}</h3>
+    <p>{{localize "TRANS.Ligacoes.VerAjuda"}}</p>
+    <div class="ttt-linha">
+      <input type="text" readonly value="{{ver}}">
+      <button type="button" data-action="copiar" data-texto="{{ver}}"><i class="fa-solid fa-copy"></i></button>
+    </div>
+  </div>
+  {{#unless utilizador}}<p class="ttt-aviso">{{localize "TRANS.Ligacoes.SemUtilizador"}}</p>{{/unless}}
+</section>

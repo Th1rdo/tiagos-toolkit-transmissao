@@ -1,0 +1,14 @@
+{
+  "TRANS.Config.Utilizador": "Broadcast user",
+  "TRANS.Config.UtilizadorHint": "The user kept open in the broadcast browser. It sees what the party sees, without Foundry's interface, and the camera moves by itself. Create a dedicated user for this (e.g. \"Broadcast\"), with the Player role and no character.",
+  "TRANS.Config.Ninguem": "— none —",
+  "TRANS.Ligacoes.Titulo": "Broadcast",
+  "TRANS.Ligacoes.Botao": "Broadcast links",
+  "TRANS.Ligacoes.Hint": "The two broadcast links: one to open in the broadcast browser, one for viewers.",
+  "TRANS.Ligacoes.EnviarTitulo": "1 · In the broadcast browser",
+  "TRANS.Ligacoes.EnviarAjuda": "Open this link in the same browser where you joined Foundry as",
+  "TRANS.Ligacoes.VerTitulo": "2 · For viewers",
+  "TRANS.Ligacoes.VerAjuda": "Pin this one in Discord. It never changes between sessions.",
+  "TRANS.Ligacoes.SemUtilizador": "You haven't picked the broadcast user in the module settings yet.",
+  "TRANS.Ligacoes.Copiada": "Link copied."
+}
