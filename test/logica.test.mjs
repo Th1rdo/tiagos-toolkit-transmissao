@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { caixa, enquadrar, precisaMover, assunto } from "../scripts/logica.js";
+import { ligacoes } from "../scripts/const.js";
 
 const ecra = { w: 1600, h: 900 };
 const q = (x, y) => ({ x, y, w: 100, h: 100 });
@@ -52,4 +53,10 @@ test("em combate segue quem joga; fora dele, o grupo", () => {
   assert.equal(assunto({ grupo: g, vez: q(900, 900) }).modo, "vez");
   assert.equal(assunto({ grupo: g, vez: null }).modo, "grupo");
   assert.equal(assunto({ grupo: [], vez: null }), null);
+});
+
+test("as duas ligações apontam para o mesmo canal que o VDO.Ninja usa", () => {
+  const l = ligacoes("mesa-2c63r3ddnd");
+  assert.ok(l.enviar.includes("push=mesa_2c63r3ddnd&"));
+  assert.ok(l.ver.includes("view=mesa_2c63r3ddnd&"));
 });

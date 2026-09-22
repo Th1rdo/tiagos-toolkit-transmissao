@@ -22,17 +22,22 @@ export const CAMARA = {
 
 /** O serviço que leva o vídeo aos espectadores: WebRTC, menos de um segundo de atraso. */
 export function ligacoes(canal) {
-  const c = encodeURIComponent(canal);
+  // O VDO.Ninja troca tudo o que não é letra, número ou _ por _ — mas só do lado
+  // de quem envia. Com um hífen no canal, a ligação de ver procurava «mesa-x» e a
+  // transmissão estava em «mesa_x»: ecrã azul para todos os espectadores (0.1.0).
+  const c = canalLimpo(canal);
   return {
     enviar: `https://vdo.ninja/?push=${c}&screenshare&screensharevideoonly`,
     ver: `https://vdo.ninja/?view=${c}&cleanoutput`
   };
 }
 
+export const canalLimpo = (canal) => String(canal ?? "").replace(/[^A-Za-z0-9_]/g, "_");
+
 /** Um canal difícil de adivinhar: quem não tem a ligação não entra. */
 export function canalNovo() {
   const a = "abcdefghjkmnpqrstuvwxyz23456789";
-  let s = "mesa-";
+  let s = "mesa_";
   for (let i = 0; i < 10; i++) s += a[Math.floor(Math.random() * a.length)];
   return s;
 }
